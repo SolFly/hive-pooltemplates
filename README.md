@@ -226,13 +226,17 @@ miners_etchash | etchash |  |
 miners_ethash | ethash |  | 
 miners_ethash_4g | ethash_4g |  | 
 miners_ethash_slash_email | ethash_slash_email | Nanopool format "WALLET.WORKER/EMAIL" | 
+miners_ethashb3 | ethashb3 |  | 
 miners_firopow | firopow |  | 
+miners_fishhash | fishhash |  | 
 miners_ghostrider | ghostrider |  | 
 miners_hmq1725 | hmq1725 |  | 
 miners_ironfish | ironfish |  | 
+miners_karlsenhash | karlsenhash |  | 
 miners_kaspa | kaspa |  | 
 miners_kawpow | kawpow |  | 
 miners_kawpow_slash_email | kawpow_slash_email | Nanopool format "WALLET.WORKER/EMAIL" | 
+miners_meowpow | meowpow |  | 
 miners_minotaurx | minotaurx |  | 
 miners_minotaurx_jiimp | minotaurx_jiimp | JIIMP format | 
 miners_nexapow | nexapow |  | 
@@ -240,6 +244,7 @@ miners_octopus | octopus |  |
 miners_olhash | olhash |  | 
 miners_progpow_sero | progpow_sero |  | 
 miners_progpow_zano | progpow_zano |  | 
+miners_pyrinhash | pyrinhash | HeavyHash variant Pyrin| 
 miners_radiant | radiant |  |  
 miners_randomhash2_with_email | randomhash2_with_email | Nanopool format "WALLET.WORKER/EMAIL" | 
 miners_randomx | randomx | Nicehash format "wallet.worker" | 
@@ -251,6 +256,8 @@ miners_sha3d | sha3d |  |
 miners_ubqhash | ubqhash |  | 
 miners_verthash | verthash |  | 
 miners_verushash | verushash |  | 
+miners_warthog | warthog | PoBW, mining WART / Warthog coin | 
+miners_xelishash | xelishash | mining XEL / Xelis | 
 miners_zelhash | zelhash |  | 
 
 

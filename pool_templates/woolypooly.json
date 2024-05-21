@@ -7,6 +7,7 @@
          "type":"PPLNS/WPDS, SOLO"
       }
    },
+
    {
       "coin":"ETHW",
       "servers":[
@@ -177,6 +178,7 @@
          "_prototype":"miners_ethash"
       }
    },
+
    {
       "coin":"ETC",
       "servers":[
@@ -347,6 +349,7 @@
          "_prototype":"miners_etchash"
       }
    },
+
    {
       "coin":"CTXC",
       "servers":[
@@ -2592,11 +2595,18 @@
          }
       ],
       "miners":{
-         "_prototype":"miners_sha512256d"
+         "_prototype":"miners_radiant",
+         "lolminer":{
+            "algo":"RADIANT",
+            "server":"%URL_HOST%",
+            "port":"%URL_PORT%",
+            "pass":"x",
+            "template":"%WAL%.%WORKER_NAME%"
+         }
       }
    },
    {
-      "coin":"Clore",
+      "coin":"CLORE",
       "servers":[
          {
             "geo":"World Auto PPLNS",
@@ -2762,7 +2772,59 @@
          }
       ],
       "miners":{
-         "_prototype":"miners_kawpow"
+         "_prototype":"miners_kawpow",
+         "t-rex":{
+            "url":"%URL%",
+            "algo":"kawpow",
+            "template":"%WAL%.%WORKER_NAME%"
+         },
+         "nbminer":{
+            "url":"%URL%",
+            "template":"%WAL%.%WORKER_NAME%",
+            "algo":"kawpow"
+         },
+         "gminer":{
+            "algo":"kawpow",
+            "server":"%URL_HOST%",
+            "port":"%URL_PORT%",
+            "pass":"x",
+            "template":"%WAL%.%WORKER_NAME%"
+         },
+         "tt-miner":{
+            "url":"%URL%",
+            "pass":"x",
+            "template":"%WAL%.%WORKER_NAME%",
+            "algo":"kawpow",
+            "user_config":"-coin %COIN%"
+         },
+         "teamredminer":{
+            "url":"stratum+tcp://%URL%",
+            "algo":"kawpow",
+            "pass":"x",
+            "template":"%WAL%.%WORKER_NAME%"
+         },
+         "wildrig-multi":{
+            "url":"stratum+tcp://%URL%",
+            "algo":"kawpow",
+            "pass":"x",
+            "template":"%WAL%.%WORKER_NAME%",
+            "user_config":""
+         },
+         "miniz":{
+            "url":"%URL%",
+            "algo":"kawpow",
+            "template":"%WAL%.%WORKER_NAME%"
+         },
+         "bzminer":{
+            "algo":"clore",
+            "url":"%URL%",
+            "template":"%WAL%.%WORKER_NAME%"
+         },
+         "rigel":{
+            "algo":"clore",
+            "url":"%URL%",
+            "template":"%WAL%.%WORKER_NAME%"
+         }
       }
    },
    {
@@ -3278,7 +3340,1047 @@
             "algo":"karlsenhash",
             "pass":"x",
             "template":"%WAL%.%WORKER_NAME%"
+         },
+         "lolminer":{
+            "algo":"KARLSEN",
+            "server":"%URL_HOST%",
+            "port":"%URL_PORT%",
+            "pass":"x",
+            "template":"%WAL%.%WORKER_NAME%"
          }
+      }
+   },
+   {
+      "coin":"NOVO",
+      "servers":[
+         {
+            "geo":"World Auto PPLNS",
+            "urls":[
+               "pool.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"World Auto SOLO",
+            "urls":[
+               "pool.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3135"
+            ]
+         },
+         {
+            "geo":"Europe PPLNS",
+            "urls":[
+               "pool.eu.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"Europe SOLO",
+            "urls":[
+               "pool.eu.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3135"
+            ]
+         },
+         {
+            "geo":"USA PPLNS",
+            "urls":[
+               "pool.us.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"USA SOLO",
+            "urls":[
+               "pool.us.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3135"
+            ]
+         },
+         {
+            "geo":"Canada PPLNS",
+            "urls":[
+               "pool.ca.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"Canada SOLO",
+            "urls":[
+               "pool.ca.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3135"
+            ]
+         },
+         {
+            "geo":"China PPLNS",
+            "urls":[
+               "pool.zh.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"China SOLO",
+            "urls":[
+               "pool.zh.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3135"
+            ]
+         },
+         {
+            "geo":"Brazil PPLNS",
+            "urls":[
+               "pool.br.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"Brazil SOLO",
+            "urls":[
+               "pool.br.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3135"
+            ]
+         },
+         {
+            "geo":"Turkey PPLNS",
+            "urls":[
+               "pool.tr.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"Turkey SOLO",
+            "urls":[
+               "pool.tr.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3135"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia PPLNS",
+            "urls":[
+               "pool.ru.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia SOLO",
+            "urls":[
+               "pool.ru.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3135"
+            ]
+         },
+         {
+            "geo":"Singapore PPLNS",
+            "urls":[
+               "pool.sg.woolypooly.com:3134"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3134"
+            ]
+         },
+         {
+            "geo":"Singapore SOLO",
+            "urls":[
+               "pool.sg.woolypooly.com:3135"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3135"
+            ]
+         }
+      ],
+      "miners":{
+         "srbminer":{
+            "url":"%URL%",
+            "algo":"sha256dt",
+            "pass":"x",
+            "template":"%WAL%.%WORKER_NAME%",
+            "user_config":"--disable-cpu"
+         },
+         "bzminer":{
+            "url":"%URL%",
+            "algo":"novo",
+            "pass":"x",
+            "template":"%WAL%.%WORKER_NAME%"
+         }
+      }
+   },
+   {
+      "coin":"PYI",
+      "servers":[
+         {
+            "geo":"World Auto PPLNS",
+            "urls":[
+               "pool.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"World Auto SOLO",
+            "urls":[
+               "pool.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3137"
+            ]
+         },
+         {
+            "geo":"Europe PPLNS",
+            "urls":[
+               "pool.eu.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"Europe SOLO",
+            "urls":[
+               "pool.eu.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3137"
+            ]
+         },
+         {
+            "geo":"USA PPLNS",
+            "urls":[
+               "pool.us.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"USA SOLO",
+            "urls":[
+               "pool.us.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3137"
+            ]
+         },
+         {
+            "geo":"Canada PPLNS",
+            "urls":[
+               "pool.ca.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"Canada SOLO",
+            "urls":[
+               "pool.ca.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3137"
+            ]
+         },
+         {
+            "geo":"China PPLNS",
+            "urls":[
+               "pool.zh.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"China SOLO",
+            "urls":[
+               "pool.zh.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3137"
+            ]
+         },
+         {
+            "geo":"Brazil PPLNS",
+            "urls":[
+               "pool.br.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"Brazil SOLO",
+            "urls":[
+               "pool.br.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3137"
+            ]
+         },
+         {
+            "geo":"Turkey PPLNS",
+            "urls":[
+               "pool.tr.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"Turkey SOLO",
+            "urls":[
+               "pool.tr.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3137"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia PPLNS",
+            "urls":[
+               "pool.ru.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia SOLO",
+            "urls":[
+               "pool.ru.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3137"
+            ]
+         },
+         {
+            "geo":"Singapore PPLNS",
+            "urls":[
+               "pool.sg.woolypooly.com:3136"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3136"
+            ]
+         },
+         {
+            "geo":"Singapore SOLO",
+            "urls":[
+               "pool.sg.woolypooly.com:3137"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3137"
+            ]
+         }
+      ],
+      "miners":{
+         "_prototype":"miners_pyrinhash"
+      }
+   },
+   {
+      "coin":"CAS",
+      "servers":[
+         {
+            "geo":"World Auto PPLNS",
+            "urls":[
+               "pool.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"World Auto SOLO",
+            "urls":[
+               "pool.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Europe PPLNS",
+            "urls":[
+               "pool.eu.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Europe SOLO",
+            "urls":[
+               "pool.eu.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"USA PPLNS",
+            "urls":[
+               "pool.us.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"USA SOLO",
+            "urls":[
+               "pool.us.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Canada PPLNS",
+            "urls":[
+               "pool.ca.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Canada SOLO",
+            "urls":[
+               "pool.ca.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"China PPLNS",
+            "urls":[
+               "pool.zh.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"China SOLO",
+            "urls":[
+               "pool.zh.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Brazil PPLNS",
+            "urls":[
+               "pool.br.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Brazil SOLO",
+            "urls":[
+               "pool.br.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Turkey PPLNS",
+            "urls":[
+               "pool.tr.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Turkey SOLO",
+            "urls":[
+               "pool.tr.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia PPLNS",
+            "urls":[
+               "pool.ru.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia SOLO",
+            "urls":[
+               "pool.ru.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Singapore PPLNS",
+            "urls":[
+               "pool.sg.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Singapore SOLO",
+            "urls":[
+               "pool.sg.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3139"
+            ]
+         }
+      ],
+      "miners":{
+         "_prototype":"miners_pyrinhash"
+      }
+   },
+
+   {
+      "coin":"HTN",
+      "servers":[
+         {
+            "geo":"World Auto PPLNS",
+            "urls":[
+               "pool.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"World Auto SOLO",
+            "urls":[
+               "pool.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Europe PPLNS",
+            "urls":[
+               "pool.eu.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Europe SOLO",
+            "urls":[
+               "pool.eu.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"USA PPLNS",
+            "urls":[
+               "pool.us.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"USA SOLO",
+            "urls":[
+               "pool.us.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Canada PPLNS",
+            "urls":[
+               "pool.ca.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Canada SOLO",
+            "urls":[
+               "pool.ca.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"China PPLNS",
+            "urls":[
+               "pool.zh.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"China SOLO",
+            "urls":[
+               "pool.zh.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Brazil PPLNS",
+            "urls":[
+               "pool.br.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Brazil SOLO",
+            "urls":[
+               "pool.br.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Turkey PPLNS",
+            "urls":[
+               "pool.tr.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Turkey SOLO",
+            "urls":[
+               "pool.tr.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia PPLNS",
+            "urls":[
+               "pool.ru.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia SOLO",
+            "urls":[
+               "pool.ru.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3139"
+            ]
+         },
+         {
+            "geo":"Singapore PPLNS",
+            "urls":[
+               "pool.sg.woolypooly.com:3138"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3138"
+            ]
+         },
+         {
+            "geo":"Singapore SOLO",
+            "urls":[
+               "pool.sg.woolypooly.com:3139"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3139"
+            ]
+         }
+      ],
+      "miners":{
+         "_prototype":"miners_pyrinhash"
+      }
+   },
+   {
+      "coin":"WART",
+      "servers":[
+         {
+            "geo":"World Auto PPLNS",
+            "urls":[
+               "pool.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"World Auto SOLO",
+            "urls":[
+               "pool.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3141"
+            ]
+         },
+         {
+            "geo":"Europe PPLNS",
+            "urls":[
+               "pool.eu.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"Europe SOLO",
+            "urls":[
+               "pool.eu.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3141"
+            ]
+         },
+         {
+            "geo":"USA PPLNS",
+            "urls":[
+               "pool.us.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"USA SOLO",
+            "urls":[
+               "pool.us.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3141"
+            ]
+         },
+         {
+            "geo":"Canada PPLNS",
+            "urls":[
+               "pool.ca.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"Canada SOLO",
+            "urls":[
+               "pool.ca.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3141"
+            ]
+         },
+         {
+            "geo":"China PPLNS",
+            "urls":[
+               "pool.zh.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"China SOLO",
+            "urls":[
+               "pool.zh.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3141"
+            ]
+         },
+         {
+            "geo":"Brazil PPLNS",
+            "urls":[
+               "pool.br.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"Brazil SOLO",
+            "urls":[
+               "pool.br.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3141"
+            ]
+         },
+         {
+            "geo":"Turkey PPLNS",
+            "urls":[
+               "pool.tr.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"Turkey SOLO",
+            "urls":[
+               "pool.tr.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3141"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia PPLNS",
+            "urls":[
+               "pool.ru.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia SOLO",
+            "urls":[
+               "pool.ru.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3141"
+            ]
+         },
+         {
+            "geo":"Singapore PPLNS",
+            "urls":[
+               "pool.sg.woolypooly.com:3140"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3140"
+            ]
+         },
+         {
+            "geo":"Singapore SOLO",
+            "urls":[
+               "pool.sg.woolypooly.com:3141"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3141"
+            ]
+         }
+      ],
+      "miners":{
+         "_prototype":"miners_warthog"
+      }
+   },
+   {
+      "coin":"SDR",
+      "servers":[
+         {
+            "geo":"World Auto PPLNS",
+            "urls":[
+               "pool.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"World Auto SOLO",
+            "urls":[
+               "pool.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.woolypooly.com:3145"
+            ]
+         },
+         {
+            "geo":"Europe PPLNS",
+            "urls":[
+               "pool.eu.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"Europe SOLO",
+            "urls":[
+               "pool.eu.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.eu.woolypooly.com:3145"
+            ]
+         },
+         {
+            "geo":"USA PPLNS",
+            "urls":[
+               "pool.us.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"USA SOLO",
+            "urls":[
+               "pool.us.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.us.woolypooly.com:3145"
+            ]
+         },
+         {
+            "geo":"Canada PPLNS",
+            "urls":[
+               "pool.ca.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"Canada SOLO",
+            "urls":[
+               "pool.ca.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.ca.woolypooly.com:3145"
+            ]
+         },
+         {
+            "geo":"China PPLNS",
+            "urls":[
+               "pool.zh.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"China SOLO",
+            "urls":[
+               "pool.zh.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.zh.woolypooly.com:3145"
+            ]
+         },
+         {
+            "geo":"Brazil PPLNS",
+            "urls":[
+               "pool.br.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"Brazil SOLO",
+            "urls":[
+               "pool.br.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.br.woolypooly.com:3145"
+            ]
+         },
+         {
+            "geo":"Turkey PPLNS",
+            "urls":[
+               "pool.tr.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"Turkey SOLO",
+            "urls":[
+               "pool.tr.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.tr.woolypooly.com:3145"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia PPLNS",
+            "urls":[
+               "pool.ru.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"Irkutsk Russia SOLO",
+            "urls":[
+               "pool.ru.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.ru.woolypooly.com:3145"
+            ]
+         },
+         {
+            "geo":"Singapore PPLNS",
+            "urls":[
+               "pool.sg.woolypooly.com:3144"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3144"
+            ]
+         },
+         {
+            "geo":"Singapore SOLO",
+            "urls":[
+               "pool.sg.woolypooly.com:3145"
+            ],
+            "ssl_urls":[
+               "pool.sg.woolypooly.com:3145"
+            ]
+         }
+      ],
+      "miners":{
+         "_prototype":"miners_kaspa"
       }
    }
 ]
